@@ -2,6 +2,7 @@
 import { Component } from 'react';
 // import User from "./components/User";
 import Navbar from "./components/Navbar";
+import User from './components/User';
 
 class App extends Component{
 
@@ -10,8 +11,22 @@ class App extends Component{
     return(
 
       <div className="container">
-        <Navbar/> 
-        <h3 className="header">User App</h3>
+        <Navbar title="User App 2"/> 
+        <hr/>
+        <User
+        name = "Omer"
+        salary = "100"
+        department = "bilisim"
+
+        />
+
+        <User
+        // name = "Omer2"
+        // salary = "1002"
+        department = "bilisim2"
+
+        />
+        
       </div>
     );
   }
