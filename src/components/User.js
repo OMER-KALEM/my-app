@@ -10,11 +10,22 @@ class User extends Component {
         salary : "Bilgi yok",
         department : "Bilgi yok"
     }*/
+    constructor(props){
+        super(props);
+
+        this.state = {
+            test : "Test",
+            isvisible: true
+        }
+    }
+
     render() {
 
         //Destructing
 
         const {name,department,salary} = this.props;
+
+        const {isvisible} = this.state;
 
         return (
             /*Cirkin gozukuyor o yuzden duzenliycem*/ 
@@ -33,10 +44,16 @@ class User extends Component {
                        <h4 className= "d-inline">{name}</h4>
                        <i className="far fa-trash-alt" style= {{cursor : "pointer"}}></i>
                    </div>
-                    <div className="card-body">
+
+                    {
+                        isvisible ? <div className="card-body">
+                        
                         <p className= "card-text"> Maas : {salary}</p>
                         <p className= "card-text"> Department : {department}</p>
-                    </div>
+                        <p>{this.state.test}</p>
+                    
+                        </div> : null
+                    }
                </div>
            </div>
         )
