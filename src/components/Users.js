@@ -3,7 +3,8 @@ import User from "./User";
 
  class Users extends Component {
     render() {
-        const {users} = this.props;
+        const {UsersInUsers} = this.props;
+        var users = UsersInUsers;
         console.log(users);
         return (
             <div>

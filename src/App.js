@@ -36,7 +36,7 @@ class App extends Component{
       <div className="container">
         <Navbar title="User App 2"/> 
         <hr/>
-        <Users users = {this.state.users}/>
+        <Users UsersInUsers = {this.state.users}/>
         
       </div>
     );
