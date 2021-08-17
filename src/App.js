@@ -2,10 +2,32 @@
 import { Component } from 'react';
 // import User from "./components/User";
 import Navbar from "./components/Navbar";
-import User from './components/User';
-import Test from './components/Test';
+import Users from './components/Users';
 
 class App extends Component{
+  state = {
+    users : [
+      {
+        id : 1,
+        name : "Omer",
+        salary : "5000",
+        department : "bilisim"
+      },
+      {
+        id : 2,
+        name : "Omer2",
+        salary : "50002",
+        department : "bilisim2"
+      },
+      {
+        id : 3,
+        name : "Omer3",
+        salary : "50003",
+        department : "bilisim3"
+      }
+    ]
+  }
+
 
   render(){
 
@@ -14,27 +36,7 @@ class App extends Component{
       <div className="container">
         <Navbar title="User App 2"/> 
         <hr/>
-        <User
-        name = "Omer"
-        salary = "100"
-        department = "bilisim"
-
-        />
-
-        <User
-        // name = "Omer2"
-        // salary = "1002"
-        department = "bilisim2"
-
-        />
-
-        
-        <Test
-        name = "TestOmer2"
-        salary = "Test1002"
-        department = "Testbilisim2"
-
-        />
+        <Users users = {this.state.users}/>
         
       </div>
     );
