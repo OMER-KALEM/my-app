@@ -14,7 +14,6 @@ class User extends Component {
         super(props);
 
         this.state = {
-            test : "Test",
             isvisible: true
         }
         //this.onClickEvent = this.onClickEvent.bind(this);
@@ -63,10 +62,8 @@ class User extends Component {
                                          isvisible ? 
                                          <div className="card-body">
                                          
-                                             <p className= "card-text"> Maas : {salary}</p>
                                              <p className= "card-text"> Department : {department}</p>
-                                             <p>{this.state.test}</p>
-                                     
+                                             <p className= "card-text"> Maas : {salary}</p>
                                          </div> : null
                                      }
                                 </div>
@@ -91,7 +88,7 @@ User.propTypes = {
     name : PropTypes.string.isRequired,
     salary : PropTypes.string.isRequired,
     department : PropTypes.string.isRequired,
-    id : PropTypes.number.isRequired
+    id : PropTypes.string.isRequired
 }
 
 export default User;
