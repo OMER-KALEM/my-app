@@ -4,6 +4,7 @@ import { Component } from 'react';
 import Navbar from "./components/Navbar";
 import Users from './components/Users';
 import AddUser from './components/AddUser';
+import TestMounting from './components/TestMounting';
 
 class App extends Component{
 
@@ -12,6 +13,7 @@ class App extends Component{
     return(
 
       <div className="container">
+        <TestMounting testMount = "deneme testMount"/>
         <Navbar title="User App 2"/> 
         <hr/>
         <AddUser/>
