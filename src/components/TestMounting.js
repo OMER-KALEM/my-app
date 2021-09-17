@@ -17,6 +17,19 @@ import React, { Component } from 'react'
              a:20
          })
      }
+     componentDidUpdate(prevProps, prevState) {
+         console.log("eski prop:" + prevProps);
+         console.log("eski state:" + prevState);
+         console.log("component did update") 
+     }
+     ///sumary
+     /// method otomatik calisiyor zaten sen yazmasan da ve true donduruyor
+     ///sumary
+     shouldComponentUpdate(nextProps, nextState) {
+         console.log("should componet update")
+         return true; // default deger true
+     }
+     
      
 
      
